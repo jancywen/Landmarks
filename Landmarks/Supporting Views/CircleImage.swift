@@ -9,17 +9,19 @@
 import SwiftUI
 
 struct CircleImage: View {
+    var image: Image
+
     var body: some View {
-        Image("timg")
+        image
             .clipShape(Circle())
             .overlay(
-                Circle().stroke(Color.green, lineWidth: 2)
+                Circle().stroke(Color.green, lineWidth: 4)
         ).shadow(radius: 10)
     }
 }
 
 struct CircleImage_Previews: PreviewProvider {
     static var previews: some View {
-        CircleImage()
+        CircleImage(image: Image("turtlerock"))
     }
 }
