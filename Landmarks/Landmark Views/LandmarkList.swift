@@ -10,12 +10,12 @@ import SwiftUI
 
 struct LandmarkList: View {
     
-    @State var showFavoritesOnly = false
+//    @State var showFavoritesOnly = false
     
     @EnvironmentObject var userData: UserData
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             List {
                 Toggle(isOn: $userData.showFavoritesOnly) {
                     Text("Favorites only")
@@ -28,19 +28,19 @@ struct LandmarkList: View {
                     }
                 }
             }.navigationBarTitle(Text("Landmarks").font(.title))
-        }
+//        }
         
     }
 }
 
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
+//        ForEach(["iPhone SE", "iPhone XS Max"], id: \.self) { deviceName in
             LandmarkList()
                 .environmentObject(UserData())
-                .previewDevice(PreviewDevice(rawValue: deviceName))
-                .previewDisplayName(deviceName)
-        }
+//                .previewDevice(PreviewDevice(rawValue: deviceName))
+//                .previewDisplayName(deviceName)
+//        }
         
     }
 }
